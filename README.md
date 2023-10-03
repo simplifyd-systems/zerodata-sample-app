@@ -29,7 +29,7 @@ Add the following dependency to your app's build.gradle file:
 - Add the following dependency to your app's build.gradle file:
 ```groovy
 dependencies {
-implementation path(":XXX")
+    implementation path(":zerodata-sdk-release.aar")
 }
 ```
 
@@ -45,9 +45,9 @@ ZeroData.sdk.initialize(apiKey, isProduction) //isProduction should be set to tr
 ```
 
 ### Step 2.2: Register for a session token and userId
-- You need to register the current user of the app so their traffic and zerodata balance can be uniquely identified and measured on zerodata hence the need for the `userId` and `sessionToken`
-The userId is used to identify the current user on zerodata's servers, you can keep this in encryptedSharedPreferences or in a singleton in memory store that is available app wide.
-The sessionToken is used for all subsequent interactions with the zerodata servers, you can keep this in encryptedSharedPreferences or in a singleton in memory store that is available app wide.
+You need to register the current user of the app so their traffic and zerodata balance can be uniquely identified and measured on zerodata hence the need for the `userId` and `sessionToken`.
+- The userId is used to identify the current user on zerodata's servers, you can keep this in encryptedSharedPreferences or in a singleton in memory store that is available app wide.
+- The sessionToken is used for all subsequent interactions with the zerodata servers, you can keep this in encryptedSharedPreferences or in a singleton in memory store that is available app wide.
 
 To obtain these values; invoke the following lines of code in your application class, root activity class or immediately after your user is logged in (in case your app contains a login/registration flow):
 ```kotlin
@@ -146,7 +146,7 @@ ZeroData.sdk.addListener(object : ZeroDataConnectionListener {
 
 ## FAQs
 - Why do I need to pass the sessionToken everytime I call an SDK function? : Some apps rely on constantly rotating tokens
-that are generated at runtime for security, hence a new token has to be supplied for each call to zerodata, if this is not the case
-for your implementation, feel free to use the same token all through the session
-- What is the Zerodata is connected notification that shows up when a session is ongoing: This is a notification indicating a foreground 
-that keeps the VPN connection alive for as long as needed, no extra battery power is drawn as a result.
+  that are generated at runtime for security, hence a new token has to be supplied for each call to zerodata, if this is not the case
+  for your implementation, feel free to use the same token all through the session.
+- What is the Zerodata is connected notification that shows up when a session is ongoing? : This is a notification indicating a foreground service
+  that keeps the VPN connection alive for as long as needed, no extra battery power is drawn as a result.
