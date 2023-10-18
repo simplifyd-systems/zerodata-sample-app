@@ -25,11 +25,12 @@ dependencies {
 
 ### Option 2: Installation from aar artifact
 Add the following dependency to your app's build.gradle file:
+- Download the SDK artifact from latest version on the [releases](https://github.com/simplifyd-systems/zerodata-sample-app/releases) page.
 - Add the `zerodata-sdk-release.aar` file to the root directory of your project
 - Add the following dependency to your app's build.gradle file:
 ```groovy
 dependencies {
-    implementation path(":zerodata-sdk-release.aar")
+     implementation path(":zerodata-sdk-release.aar")
 }
 ```
 
@@ -146,7 +147,7 @@ ZeroData.sdk.addListener(object : ZeroDataConnectionListener {
 
 ## FAQs
 - Why do I need to pass the sessionToken everytime I call an SDK function? : Some apps rely on constantly rotating tokens
-  that are generated at runtime for security, hence a new token has to be supplied for each call to zerodata, if this is not the case
-  for your implementation, feel free to use the same token all through the session.
-- What is the Zerodata is connected notification that shows up when a session is ongoing? : This is a notification indicating a foreground service
-  that keeps the VPN connection alive for as long as needed, no extra battery power is drawn as a result.
+that are generated at runtime for security, hence a new token has to be supplied for each call to zerodata, if this is not the case
+for your implementation, feel free to use the same token all through the session.
+- What is the Zerodata is connected notification that shows up when a session is ongoing? : This is a notification indicating a foreground service 
+that keeps the VPN connection alive for as long as needed, no extra battery power is drawn as a result.
