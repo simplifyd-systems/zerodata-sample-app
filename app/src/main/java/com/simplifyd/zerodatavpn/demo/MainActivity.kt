@@ -193,10 +193,9 @@ class MainActivity : Activity() {
     }
 
     companion object {
-        private const val API_KEY = "uPfm2nmENR5CJH5xDmlrNrJZlEob/yDYtBOJPv1gUk0="
+        private const val API_KEY = "API_KEY"
         private const val USER_IDENTIFIER = "zerodata_test@zerodata.com"
-        private const val APP_TOKEN =
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJidXNpbmVzcyI6ImU2ZTIxNTBkLWUwYzgtNGY4Yi04MTRlLTI5MTViOThmNDNhZiIsInNlcmlhbCI6IjVEOTlENTAxN0ExNTVBMDYzRjQ5MzBERDY5MzhGREQwIiwidHlwZSI6ImJ1c2luZXNzIn0.4SY_geDcudNUSdwGcDs4ex4TmAviCA7EpNHzE3pl_KI"
+        private const val APP_TOKEN = "APP_TOKEN"
 
         private const val URL = "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8"
     }
